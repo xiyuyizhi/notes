@@ -3,7 +3,7 @@
 
 - ## demo demo
 
- ### [angular demo](https://xiyuyizhi.github.io/ng-demo/)
+ ### <a href="https://xiyuyizhi.github.io/ng-demo/" target="_blank">angular demo</a>
 
  ### [react-demo](https://xiyuyizhi.github.io/react-demo/)
 
@@ -12,6 +12,9 @@
  ### [react练手](https://github.com/xiyuyizhi/movies)
 
  ### [前端加解密](https://github.com/xiyuyizhi/encrypt)
+ 
+ 
+ 
 
 - ## js
 
