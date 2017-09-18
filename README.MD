@@ -1,4 +1,4 @@
-#记点东西
+# 记点东西
 
 
 - ## demo demo
@@ -15,19 +15,17 @@
 
 - ## js
 
-
 - ## es6
-
 
 - ## angular
 
-
 - ## react redux
 
+- ## data structure
 
-- ## 算法数据结构
+- ## network
 
+- ## design pattern
 
-- ## 网络
 
 
