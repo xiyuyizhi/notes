@@ -1,25 +1,33 @@
 #记点东西
 
 
-## demo project
+- ## demo demo
+
+ ### [angular demo](https://xiyuyizhi.github.io/ng-demo/)
+
+ ### [react-demo](https://xiyuyizhi.github.io/react-demo/)
+
+ ### [angular+webpack+express实现的博客系统](https://github.com/xiyuyizhi/myBlog)
+
+ ### [react练手](https://github.com/xiyuyizhi/movies)
+
+ ### [前端加解密](https://github.com/xiyuyizhi/encrypt)
+
+- ## js
 
 
-
-## js
-
-
-## es6
+- ## es6
 
 
-## angular
+- ## angular
 
 
-## react redux
+- ## react redux
 
 
-## 算法数据结构
+- ## 算法数据结构
 
 
-## 网络
+- ## 网络
 
 
