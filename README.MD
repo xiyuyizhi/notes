@@ -18,6 +18,8 @@
 
 - ## js
 
+ [object in javascript](./js/Object.md)
+
 - ## es6
 
 - ## angular
