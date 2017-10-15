@@ -1,26 +1,26 @@
 # 记点东西
 
 
-- ## demo demo
+ ## 练习
 
  ### <a href="https://xiyuyizhi.github.io/ng-demo/" target="_blank">angular demo</a>
 
  ### [react-demo](https://xiyuyizhi.github.io/react-demo/)
 
- ### [angular+webpack+express实现的博客系统](https://github.com/xiyuyizhi/myBlog)
+ ### [angular实现的博客系统](https://github.com/xiyuyizhi/myBlog)
 
- ### [react练手](https://github.com/xiyuyizhi/movies)
+ ### [react实践](https://github.com/xiyuyizhi/movies)
 
  ### [前端加解密](https://github.com/xiyuyizhi/encrypt)
  
  
  
 
-- ## js
+ ## js
 
  [object in javascript](./js/Object.md)
 
-- ## rxjs
+ ## rxjs
 
  [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
 
@@ -28,18 +28,18 @@
 
  [民工叔叔的RxJs理解](https://zhuanlan.zhihu.com/xufei)
 
-- ## es6
+ ## angular
+
+ ## react redux
+
+ ## 算法、数据结构
+
+[《算法》学习笔记一](./data_structure/algorithms1.md)
 
 
-- ## angular
+ ## 网络
 
-- ## react redux
-
-- ## data structure
-
-- ## network
-
-- ## design pattern
+ ## 设计模式
 
 
 
