@@ -28,7 +28,7 @@
 
  [民工叔叔的RxJs理解](https://zhuanlan.zhihu.com/xufei)
 
- ## angular
+ ## angularjs
 
  ## react redux
 
