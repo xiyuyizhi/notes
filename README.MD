@@ -3,11 +3,9 @@
 
  ## 练习
 
- ### <a href="https://xiyuyizhi.github.io/ng-demo/" target="_blank">angular demo</a>
+ ### [angular实现的博客系统](https://github.com/xiyuyizhi/myBlog)
 
  ### [react-demo](https://xiyuyizhi.github.io/react-demo/)
-
- ### [angular实现的博客系统](https://github.com/xiyuyizhi/myBlog)
 
  ### [react实践](https://github.com/xiyuyizhi/movies)
 
