@@ -17,7 +17,7 @@
 
  ## js
 
- -[x] [object in javascript](./js/Object.md)
+ - [x] [object in javascript](./js/Object.md)
 
  ## rxjs
 
