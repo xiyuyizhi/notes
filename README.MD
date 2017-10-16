@@ -1,5 +1,6 @@
 # 记点东西
 
+感兴趣的话，watch一下~
 
  ## 练习
 
@@ -16,7 +17,7 @@
 
  ## js
 
- [object in javascript](./js/Object.md)
+ -[x] [object in javascript](./js/Object.md)
 
  ## rxjs
 
@@ -30,25 +31,33 @@
 
  ## react redux
 
-react实践
+react实践项目总结
 
-- [一步一步搭建react应用-前后端初始化](https://github.com/xiyuyizhi/movies/blob/master/dayByday/day1.md)
+- [x] [一步一步搭建react应用-前后端初始化](https://github.com/xiyuyizhi/movies/blob/master/dayByday/day1.md)
 
-- [爬取豆瓣电影的电影信息](https://github.com/xiyuyizhi/movies/blob/master/dayByday/day2.md)
+- [x] [爬取豆瓣电影的电影信息](https://github.com/xiyuyizhi/movies/blob/master/dayByday/day2.md)
 
-- [mongodb开启身份认证](https://github.com/xiyuyizhi/movies/blob/master/dayByday/day3.md)
+- [x] [mongodb开启身份认证](https://github.com/xiyuyizhi/movies/blob/master/dayByday/day3.md)
 
-- [使用 jwt + redis 来做基于token的用户身份认证](https://github.com/xiyuyizhi/movies/blob/master/dayByday/day4.md)
+- [x] [使用 jwt + redis 来做基于token的用户身份认证](https://github.com/xiyuyizhi/movies/blob/master/dayByday/day4.md)
 
-- [node中使用 mocha + supertest + should 来写单元测试](https://github.com/xiyuyizhi/movies/blob/master/dayByday/day5.md)
+- [x] [node中使用 mocha + supertest + should 来写单元测试](https://github.com/xiyuyizhi/movies/blob/master/dayByday/day5.md)
 
-- [部署](https://github.com/xiyuyizhi/movies/blob/master/dayByday/day6.md)
+- [x] [部署](https://github.com/xiyuyizhi/movies/blob/master/dayByday/day6.md)
 
 
 
  ## 算法、数据结构
 
-[《算法》学习笔记一](./data_structure/algorithms1.md)
+- [x] [《算法第一章》学习笔记](./data_structure/algo1/algorithms1.md)
+
+- [ ] [《算法第二章》学习笔记]()
+
+- [ ] [《算法第三章》学习笔记]()
+
+- [ ] [《算法第四章》学习笔记]()
+
+- [ ] [《算法第五章》学习笔记]()
 
 
  ## 网络
