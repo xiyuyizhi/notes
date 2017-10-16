@@ -1,6 +1,6 @@
 # 记点东西
 
-感兴趣的话，watch一下~
+:point_right: 感兴趣的话，watch一下吧
 
  ## 练习
 
