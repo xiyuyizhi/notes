@@ -51,7 +51,7 @@ react实践项目总结
 
 - [x] [《算法第一章》学习笔记](./data_structure/algo1/algorithms1.md)
 
-- [ ] [《算法第二章》学习笔记]()
+- [ ] [《算法第二章》学习笔记](./data_structure/algo2/algorithms2.md)
 
 - [ ] [《算法第三章》学习笔记]()
 
