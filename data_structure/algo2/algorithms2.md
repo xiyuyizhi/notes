@@ -146,3 +146,128 @@ function insertsort(arr) {
 所以平均情况下 插入排序的时间复杂度也是`平方级`
 
 ### 归并排序
+
+> 要将一个数组排序，要先（递归的）将它分成两半分别排序，再将结果归并起来，归并排序能够保证将任意长度为N的数组排序所需的时间和`NlogN`成正比,主要缺点是所需的额外空间和`N`成正比
+
+- 自顶向下的归并排序
+
+> 自顶向下的归并排序是应用`分治思想`的典型例子
+
+
+```
+function MergeSort(arr) {
+    this.source = arr
+    this.tempArr = new Array(arr.length).fill(0)
+    this.init()
+}
+
+MergeSort.prototype.init = function () {
+    var len = this.source.length
+    this.sort(this.source, 0, len-1)
+}
+
+/**
+ * 判断两个值的大小
+ * @param {number} j 
+ * @param {number} i 
+ */
+MergeSort.prototype.less = function (j, i) {
+    return this.tempArr[j] < this.tempArr[i]
+}
+
+/**
+ * 将两个有序数组合并成一个
+ * @param {array} arr 
+ * @param {number} start 
+ * @param {number} min 
+ * @param {number} end 
+ */
+MergeSort.prototype.merge = function (arr, start, min, end) {
+    var i = start
+    var j = min + 1
+    for (var k = 0; k <= end; k++) {
+        this.tempArr[k] = arr[k]
+        this.tempArr.push(arr[k])
+    }
+    for (var k = start; k <= end; k++) {
+        if (i > min) {
+            arr[k] = this.tempArr[j++]
+        } else if (j > end) {
+            arr[k] = this.tempArr[i++]
+        } else if (this.less(j, i)) {
+            arr[k] = this.tempArr[j++]
+        } else {
+            arr[k] = this.tempArr[i++]
+        }
+    }
+}
+/**
+ * 自顶向下的归并排序
+ */
+MergeSort.prototype.sort = function (arr, start, end) {
+    if (start >= end) return
+    var min = start + Math.floor((end - start) / 2)
+    this.sort(arr, start, min)
+    this.sort(arr, min + 1, end)
+    this.merge(arr, start, min, end)
+}
+
+```
+
+复杂度分析:
+
+![](./up-down-mergesort.png)
+
+如图所示,树中的每个节点都表示一个sort()方法通过merge()归并而成立的子数组，这棵树正好有`n层`。
+
+对于0 ~ n-1之间的任意k，自顶向下的第k层有`2^k`个子数组,每个数组的长度为2^n / 2^k = `2^(n-k)`，归并最多需要2^(n-k)次比较。
+
+因此每层的比较次数为 2^k*2^n = 2^n次,n层共为`n*2^n`次
+
+对位长度为N的数组,n为lgN(以2位底的对数表示为lg),所以 n*2^n = lgN*2^n = `NlgN`
+
+- 自底向上的归并排序
+
+> 实现归并排序的的另一种方法是先归并那些微型数组，然后再成对归并得到的子数组，直到将整个数组归并起来
+
+```
+less = function (j, i) {
+    return tempArr[j] < tempArr[i]
+}
+
+function merge(arr, start, min, end) {
+    var i = start
+    var j = min + 1
+    for (var k = 0; k <= end; k++) {
+        tempArr[k] = arr[k]
+        tempArr.push(arr[k])
+    }
+    for (var k = start; k <= end; k++) {
+        if (i > min) {
+            arr[k] = tempArr[j++]
+        } else if (j > end) {
+            arr[k] = tempArr[i++]
+        } else if (less(j, i)) {
+            arr[k] = tempArr[j++]
+        } else {
+            arr[k] = tempArr[i++]
+        }
+    }
+}
+
+//两两归并小数组
+function sort(arr) {
+    var n = arr.length
+    for (var sz = 1; sz < n; sz += sz) {
+        for (var i = 0; i < n - sz; i += sz + sz) {
+            merge(arr, i, i + sz - 1, Math.min(i + sz + sz - 1, n - 1))
+        }
+    }
+
+}
+```
+
+![](./down-up-mergesort.png)
+
+
+### 快速排序
