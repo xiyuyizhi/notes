@@ -271,3 +271,75 @@ function sort(arr) {
 
 
 ### 快速排序
+
+
+> 快速排序是一种分治的排序算法，它将一个数组分成两个子数组，独立排序。快速排序和归并排序是互补的；在归并排序中，一个数组被等分成两半，在快速排序中，切分的位置取决于数组的内容。
+
+> 快速排序的特点保存它是原地排序，且将长度为N的数组排序所需的时间和`NlgN`成正比
+
+```
+
+function quicksort(arr,start,end){
+
+    if(start>=end) return 
+
+    var j=partition(a,start,end) //确定切分点
+
+    sort(arr,start,j)
+
+    sort(arr,j+1,end)
+
+}
+
+```
+
+该方法的关键在于切分，切分使得数组满足下面三个条件
+
+- [x] 对于某个j,a[j]已经排好
+
+- [x] a[start]到a[j-1]的所有元素都不大于a[j]
+
+- [x] a[j+1]到a[end]的所有元素都不小于a[j]
+
+
+切分的思想是: 先随意的取a[start]作为切分元素，然后从数组的左侧开始遍历，找到第一个不小于a[start]的元素，从数组的右侧开始遍历，找到第一个不大于a[start]的元素，将两个元素交换，继续左右两侧的遍历、交换，直到左右遍历相交，然后将相交位置的元素与a[start]交换
+
+![](./partition.png)
+
+```
+function less(x, y) {
+    return x >= y
+}
+
+function exchange(arr, i, j) {
+    var t = arr[i]
+    arr[i] = arr[j]
+    arr[j] = t
+}
+
+//切分算法
+function partition(arr, start, end) {
+
+    var i = start
+    var j = end + 1
+    var v = arr[start]
+    while (true) {
+
+        while (less(v, arr[++i])) {
+            if (i == end) {
+                break;
+            }
+        }
+        while (less(arr[--j], v)) {
+            if (j == start) {
+                break
+            }
+        }
+        if (i >= j) break
+        exchange(arr, i, j)
+    }
+    exchange(arr, start, j)
+    return j
+}
+
+```
