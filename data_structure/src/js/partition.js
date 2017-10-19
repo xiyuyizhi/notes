@@ -1,12 +1,14 @@
 
-function quicksort(arr, start, end) {
+function quicksort(arr, start, end, fn) {
 
     if (start >= end) return
     var j = partition(arr, start, end) //确定切分
 
-    quicksort(arr, start, j - 1)
+    fn && fn(arr)
 
-    quicksort(arr, j + 1, end)
+    quicksort(arr, start, j - 1, fn)
+
+    quicksort(arr, j + 1, end, fn)
 
 }
 
@@ -44,19 +46,7 @@ function exchange(arr, i, j) {
     arr[j] = t
 }
 
-var arr = [5, 2, 4, 3, 9, 6, 7, 8, 0]
 
-/**
- * 5, 2, 4, 3, 9, 6, 7, 8, 0
- *             i           j
- *             4           8 
- * 5, 2, 4, 3, 0, 6, 7, 8, 9
- * 0, 2, 4, 3, 5, 6, 7, 8, 9
- * 
- * 
- * 
- */
-
-quicksort(arr, 0, arr.length - 1)
-
-console.log(arr)
+export default function quick_sort(arr, fn) {
+    quicksort(arr, 0, arr.length - 1, fn)
+}

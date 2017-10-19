@@ -1,16 +1,15 @@
 
 
-var arr = [5, 3, 7, 9, 6, 8, 2, 4, 8] //0 3 7
-
-function MergeSort(arr) {
+function MergeSort(arr, render) {
     this.source = arr
+    this.render = render
     this.tempArr = new Array(arr.length).fill(0)
     this.init()
 }
 
 MergeSort.prototype.init = function () {
     var len = this.source.length
-    this.sort(this.source, 0, len-1)
+    this.sort(this.source, 0, len - 1)
 }
 
 /**
@@ -47,6 +46,7 @@ MergeSort.prototype.merge = function (arr, start, min, end) {
             arr[k] = this.tempArr[i++]
         }
     }
+    this.render(arr)
 }
 /**
  * 自顶向下的归并排序
@@ -60,8 +60,12 @@ MergeSort.prototype.sort = function (arr, start, end) {
 }
 
 
-new MergeSort(arr)
-console.log(arr)
+
+
+export default function up_down_merge_sort(arr, fn) {
+    new MergeSort(arr, fn)
+}
+
 
 
 

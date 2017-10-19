@@ -29,14 +29,14 @@ function less(x, y) {
 /**
  * @param {array} arr 
  */
-function insertsort(arr) {
+export default function insertsort(arr, fn) {
 
-    var n =arr.length
+    var n = arr.length
 
     arr.forEach((x, i) => {
-
         for (var j = i + 1; j < n && j > 0 && less(arr[j], arr[j - 1]); j--) {
             exchange(arr, j, j - 1)
+            fn && fn(arr)
         }
 
     })
@@ -68,4 +68,3 @@ function insertsort(arr) {
  * 
  */
 
-console.log(insertsort([5, 2, 1, 8, 7, 0, 0]))

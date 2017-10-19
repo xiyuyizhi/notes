@@ -1,5 +1,8 @@
 
-less = function (j, i) {
+let tempArr
+let render
+
+function less(j, i) {
     return tempArr[j] < tempArr[i]
 }
 
@@ -21,6 +24,7 @@ function merge(arr, start, min, end) {
             arr[k] = tempArr[i++]
         }
     }
+    render && render(arr)
 }
 
 
@@ -35,10 +39,9 @@ function sort(arr) {
 }
 
 
-var arr = [5, 3, 7, 9, 6, 8, 2, 4, 8]
 
-var tempArr= new Array(arr.length).fill(0)
-
-sort(arr)
-
-console.log(arr)
+export default function down_up_merge_sort(arr, fn) {
+    render = fn
+    tempArr = new Array(arr.length).fill(0)
+    sort(arr)
+}

@@ -15,9 +15,10 @@ function exchange(arr, x, y) {
  * 
  * @param {array} arr 
  */
-function selectsort(arr) {
+export default function selectsort(arr, fn) {
 
     var n = arr.length
+    var timer
 
     arr.forEach(function (x, i) {
         var min = i
@@ -27,6 +28,7 @@ function selectsort(arr) {
             }
         }
         exchange(arr, i, min)
+        fn && fn(arr)
     })
 }
 /**交换 比较
@@ -42,5 +44,3 @@ function selectsort(arr) {
  * N   (N-1)(1+N-1)/2 = N(N-1)/2 ~ n^2/2
  */
 
-
-selectsort([5, 3, 2, 7, 0, 9])
