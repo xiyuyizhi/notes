@@ -1,4 +1,4 @@
-# 《算法》第二章学习笔记js实现
+# 《算法》第二章排序学习笔记js实现
 
 > 对排序算法，我们重点关注比较次数和两个元素交换的次数，对于不交换元素的算法，我们重点关注访问数组的次数
 
@@ -343,3 +343,417 @@ function partition(arr, start, end) {
 }
 
 ```
+
+### 优先队列
+
+> 许多应用程序都需要处理有序的元素，但不一定要求它们全部有序，或是不一定要一次就将他们排序，在这种情况下，一个合适的数据结构应该支持两种操作，`删除最大的元素和插入元素`，这种数据类型叫做优先队列
+
+定义优先队列API
+
+MaxPQ | 定义
+--- | ---
+MaxPQ() | 创建一个优先队列
+insert()| 插入一个元素
+max()| 返回最大元素
+delMax() | 删除并返回最大元素
+isEmpty() | 队列是否为空
+size()| 队列中元素个数
+
+场景 TopK：
+
+ 输入N个数字，从中找出最大或最小的k个整数，在某些应用场景中，输入量可能非常巨大
+
+ 解决这个问题的一种方法是将输入排序然后从中找出K个最大的元素，但我们已经说明输入将会非常庞大，另一种办法是将每个新的输入和已知的K个最大的元素比较，但除非K较小，否则这种比较的代价会非常昂贵，只要我们能够高效的实现`insert()和delMin()`,我们就能使用优先队列解决这个问题。
+
+ - 初级实现
+
+ 第一章讨论过的数组和链表是实现优先队列的起点
+
+ 1. 数组实现（无序）
+
+    实现优先队列的最简单的方法是基于下压栈，insert()方法的代码和栈的push()一样，要实现删除最大元素，我们可以添加一段类似于选择排序的内循环的代码，`将最大元素和边界元素交换然后删除它`
+
+```
+    /**
+ * 
+ * @param {number} max 
+ */
+function MaxPQ(max) {
+    this.container = []
+}
+
+MaxPQ.prototype.insert = function (v) {
+    this.container.push(v)
+}
+
+MaxPQ.prototype.less = function (i, j) {
+    return this.container[i] < this.container[j]
+}
+
+MaxPQ.prototype.exch = function (i, j) {
+    var t = this.container[i]
+    this.container[i] = this.container[j]
+    this.container[j] = t
+}
+
+MaxPQ.prototype.delMin = function () {
+    var min = 0
+    var n = this.container.length
+    //找到最小的元素
+    for (var i = 1; i < n; i++) {
+        if (this.less(i, min)) {
+            min = i
+        }
+    }
+    this.exch(min, this.container.length - 1)
+    return this.container.pop()
+}
+MaxPQ.prototype.size = function () {
+    return this.container.length
+}
+MaxPQ.prototype.isEmpty = function () {
+    return !this.container.length
+}
+
+//用例 Top 6
+var max = 6
+var arr = []
+var maxPQ = new MaxPQ(max + 1)
+var input = [5, 7, 20, 18, 3, 1, 22, 53, 0, 6]
+input.forEach(function (i) {
+    maxPQ.insert(i)
+    if (maxPQ.size() > max) {
+        maxPQ.delMin()
+    }
+})
+while (!maxPQ.isEmpty()) {
+    arr.push(maxPQ.delMin())
+}
+console.log(arr)
+
+//输出
+[ 6, 7, 18, 20, 22, 53 ]
+```  
+
+ 2. 数组实现（有序）
+
+ 另一种方法是在insert()方法中添加代码，`将所有较大的元素向右移动一格以使数组保持有序（和插入排序一样）`，这样，最大的元素总会在数组的一边，优先队列的删除就和栈的pop()操作一样
+
+ 3. 连边表示法
+
+ 和刚才一样，我们可以用基于链表的下压栈的代码作为基础，而后可以选择修改pop()来找到并返回最大的元素,或者修改push()来保证所有元素都是逆序有序的并用pop()来删除并返回链表的首元素
+
+ 对前者的实现:
+
+ ```
+
+function Node(item) {
+    this.item = item
+    this.next = null
+}
+
+function MaxPQ() {
+    this.count = 0 //元素数量
+    this.first = null //指向栈顶
+}
+
+MaxPQ.prototype.isEmpty = function () {
+    return this.first == null
+}
+MaxPQ.prototype.size = function () {
+    return this.count
+}
+MaxPQ.prototype.insert = function (ele) {
+    var oldfirst = this.first
+    var newnode = new Node(ele)
+    newnode.next = oldfirst
+    this.first = newnode
+    this.count++
+}
+MaxPQ.prototype.delMin = function () {
+    var minNode = this.first
+    var nextNode = this.first.next
+    var min
+    //找到最小的元素节点
+    while (nextNode) {
+        if (this.less(nextNode, minNode)) {
+            minNode = nextNode
+        }
+        nextNode = nextNode.next
+    }
+    //与首节点交换
+    this.exch(this.first, minNode)
+    min = this.first.item
+    //删除首节点
+    this.first = this.first.next
+    this.count--
+    return min
+}
+MaxPQ.prototype.exch = function (node1, node2) {
+    var t = node1.item
+    node1.item = node2.item
+    node2.item = t
+}
+
+MaxPQ.prototype.less = function (node1, node2) {
+    return node1.item < node2.item
+}
+
+//用例
+var max = 5
+var arr = []
+var maxPQ = new MaxPQ()
+var input = [5, 7, 20, 18, 3, 1, 22, 53, 0, 6]
+input.forEach(function (i) {
+    maxPQ.insert(i)
+    if (maxPQ.size() > 6) {
+        maxPQ.delMin()
+    }
+})
+while (!maxPQ.isEmpty()) {
+    arr.push(maxPQ.delMin())
+}
+console.log(arr)
+ ```
+
+> 我们刚刚讨论的所有初级实现中，插入元素和删除最小元素这两个操作之一在最坏情况下需要`线性时间`来完成
+
+- ### 堆的定义
+
+> 数据结构二叉堆能够很好的实现优先队列的基本操作，在二叉堆的数组中，每个元素都要保证大于等于另两个特定位置的元素
+
+> 当一颗二叉树的每一个结点都大于等于它的两个子节点时，它被称为堆有序
+
+> 完全二叉树：若设二叉树的深度为h,除第h层外，其他各层的结点数都达到了最大个数，第h层所有的结点都是连续集中在最左边
+
+> 二叉堆是一组能够用堆有序的完全二叉树排序的元素，并在数组中按照层次存储
+
+堆的表示
+
+![](./dui.png)
+
+> 在一个堆中，位置k的结点的父结点的位置为k/2，而它的两个子节点的位置则为2k和2k+1，这样在不使用指针的情况下，我们也可以通过计算数组的索引在树中上下移动
+
+- 堆的算法
+
+由下至上的堆有序化(上浮)
+
+如果堆的有序状态因为某个结点变得比它的父节点更大而被打破，我们就需要通过`交换它和它的父节点`来修复堆
+
+```
+function swim(k){
+    while(k>1 && less(k/2,k)){
+        exch(k/2,k)
+        k=k/2
+    }
+}
+```
+
+由上至下的堆有序化(下沉)
+
+如果堆的有序状态因为某个结点变得比它的两个子节点或是其中之一更小而被打破，我们就需要通过`将它和它的两个子节点中的较大者交换`来修复堆
+
+
+```
+function sink(k){
+    while(2*k<=N){
+        var j=2*k
+        if(j<N && less(j,j+1)){
+            j++
+        }
+        if(!less(k,j)) break;
+        exch(k,j)
+        k=j
+    }
+}
+```
+
+插入元素
+
+> 将新元素加入数组末尾，增加堆的大小并让这个元素上浮到合适的位置
+
+删除最大元素
+
+> 从数组顶端删去最大元素并将数组的最后一个元素放到顶端，减小堆的大小并让这个元素下沉到合适的位置
+
+![](./dui-insert-del.png)
+
+算法实现
+
+```
+
+function MaxPQ() {
+    this.container = []
+    this.n = 0
+}
+
+MaxPQ.prototype.isEmpty = function () {
+    return this.n == 0
+}
+
+MaxPQ.prototype.size = function () {
+    return this.n
+}
+
+MaxPQ.prototype.less = function (i, j) {
+    return this.container[i] > this.container[j]
+}
+
+MaxPQ.prototype.insert = function (el) {
+    this.container[++this.n] = el
+    //重新构建堆有序
+    this.swim(this.n)
+}
+
+MaxPQ.prototype.delMin = function () {
+    var min = this.container[1]
+    this.exch(1, this.n--)
+     //重新构建堆有序
+    this.sink(1)
+    return min
+}
+
+//下沉
+MaxPQ.prototype.sink = function (k) {
+    while (2 * k <= this.n) {
+        var j = 2 * k
+        if (j < this.n && this.less(j, j + 1)) {
+            j++
+        }
+        if (!this.less(k, j)) break;
+        this.exch(k, j)
+        k = j
+    }
+}
+
+//上浮
+MaxPQ.prototype.swim = function (k) {
+    while (k > 1 && this.less(Math.floor(k / 2), k)) {
+        var half = Math.floor(k / 2)
+        this.exch(half, k)
+        k = half
+    }
+}
+
+MaxPQ.prototype.exch = function (i, j) {
+    var t = this.container[i]
+    this.container[i] = this.container[j]
+    this.container[j] = t
+}
+
+//用例
+var arr = []
+var maxPQ = new MaxPQ()
+var input = [5, 7, 20, 18, 3, 1, 22, 53, 0, 6]
+input.forEach(function (i) {
+    maxPQ.insert(i)
+    if (maxPQ.size() > 6) {
+        maxPQ.delMin()
+    }
+})
+while (!maxPQ.isEmpty()) {
+    arr.push(maxPQ.delMin())
+}
+console.log(arr)
+
+```
+
+### 堆排序
+
+我们可以把任意优先队列变成一种排序算法，将所有元素插入一个`查找最小元素`的优先队列，然后再重复调用`删除最小元素`的操作来将它们按顺序删去。用无序数组实现的优先队列这么做相当于进行一次选择排序，用基于堆的优先对立这样做就是`堆排序`
+
+堆排序的两个阶段
+
+- [x] 构造阶段，将原始数组重新组织安排进一个堆中
+
+- [x] 下沉阶段，从堆中按递减顺序取出所有元素并得到排序结果
+
+- 堆的构造阶段
+ 
+ 我们可以从左到右扫描数组，用swim()保证扫描指针左侧的所有元素已经是一颗堆有序的完全树
+
+ ```
+ function SortPQ(arr) {
+    var n = arr.length
+    for (var i = 1; i < n; i++) {
+        swim(arr, i)
+    }
+}
+
+ ```
+
+一个更聪明高效的办法是从右至左的用sink()函数构造子堆，这个过程会递归的建立起堆的秩序
+
+- 下沉排序阶段
+
+堆排序的主要工作都在这个阶段，我们将堆中的最大元素(即a[1]位置元素)与最后一个元素交换，然后减小下一次a[1]元素下沉的重点，修复堆，重复这个过程，直到完成排序
+
+
+- 堆排序实现
+
+```
+function Sort(arr) {
+    this.container = [null].concat(arr)
+}
+
+Sort.prototype.less = function (i, j) {
+    return this.container[i] < this.container[j]
+}
+
+Sort.prototype.exch = function (i, j) {
+    var t = this.container[i]
+    this.container[i] = this.container[j]
+    this.container[j] = t
+}
+
+//下沉
+Sort.prototype.sink = function (k, N) {
+    while (2 * k <= N) {
+        var j = 2 * k
+        if (j < N && this.less(j, j + 1)) {
+            j++
+        }
+        if (!this.less(k, j)) break;
+        this.exch(k, j)
+        k = j
+    }
+}
+
+Sort.prototype.sort = function () {
+    var n = this.container.length - 1
+    for (var i = Math.floor(n / 2); i >= 1; i--) {
+        this.sink(i, n)
+    }
+    while (n > 1) {
+        this.exch(1, n--)
+        this.sink(1, n)
+    }
+    return this.container.slice(1, this.container.length - 1)
+}
+
+//用例
+var input = [, 5, 7, 20, 18, 3, 1, 22, 53, 0, 6]
+var sort = new Sort(input)
+console.log(sort.sort())
+
+```
+
+### 总结
+
+本章的学习收获
+
+- [x] 选择排序
+
+- [x] 插入排序
+
+- [x] 基于分治思想的归并排序的两种方式
+
+- [x] 快速排序
+
+- [x] 优先队列的定义及应用场景，例如解决TopK问题
+
+- [x] 优先队列的基于数组或链表的初级实现
+
+- [x] 二叉堆的定义及基于二叉堆的优先队列的实现
+
+- [x] 基于二叉堆的优先队列排序-堆排序

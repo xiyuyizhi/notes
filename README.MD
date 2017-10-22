@@ -11,10 +11,9 @@
  ### [react实践](https://github.com/xiyuyizhi/movies)
 
  ### [前端加解密](https://github.com/xiyuyizhi/encrypt)
- 
- 
- 
 
+ ### [rxjs实践](https://xiyuyizhi.github.io/rxjs-sort-visualization/)
+ 
  ## js
 
  - [x] [object in javascript](./js/Object.md)
@@ -26,6 +25,8 @@
  [(翻译)The introduction to Reactive Programming you've been missing](https://github.com/hehonghui/android-tech-frontier/tree/master/androidweekly/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E9%94%99%E8%BF%87%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B)
 
  [民工叔叔的RxJs理解](https://zhuanlan.zhihu.com/xufei)
+
+ - [x] [Rxjs入门实践-各种排序算法排序过程的可视化展示](./rxjs/rxjs-practice.md)
 
  ## angularjs
 
@@ -51,7 +52,7 @@ react实践项目总结
 
 - [x] [《算法第一章》学习笔记](./data_structure/algo1/algorithms1.md)
 
-- [ ] [《算法第二章》学习笔记](./data_structure/algo2/algorithms2.md)
+- [x] [《算法第二章》学习笔记](./data_structure/algo2/algorithms2.md)   [各种排序算法排序过程的可视化展示](./rxjs/rxjs-practice.md)
 
 - [ ] [《算法第三章》学习笔记]()
 
