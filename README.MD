@@ -26,7 +26,7 @@
 
  [民工叔叔的RxJs理解](https://zhuanlan.zhihu.com/xufei)
 
- - [x] [Rxjs入门实践-各种排序算法排序过程的可视化展示](./rxjs/rxjs-practice.md)
+ - [x] [Rxjs入门实践-各种排序算法排序过程的可视化展示](https://github.com/xiyuyizhi/notes/issues/1)
 
  ## angularjs
 
