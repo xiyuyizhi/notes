@@ -15,6 +15,8 @@
  ### [rxjs实践](https://xiyuyizhi.github.io/rxjs-sort-visualization/)
  
  ## js
+ 
+ (转)[从 []==![] 为 true 来剖析 JavaScript 各种蛋疼的类型转换](https://github.com/jawil/blog/issues/1)
 
  - [x] [object in javascript](./js/Object.md)
 
