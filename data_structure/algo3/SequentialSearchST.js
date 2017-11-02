@@ -2,6 +2,11 @@
 /**
  * 基于无序链表的顺序查找
  * 
+ * 最坏情况(N次插入后)
+ * 
+ * 插入       查找
+ *  N         N
+ * 
  */
 
 class Node {
@@ -20,13 +25,11 @@ class SequentialSearchST {
     }
 
     put(key, val) {
-        let node = this.first
-        while (node) {
+        for (let node = this.first; node !== null; node = node.next) {
             if (node.key === key) {
                 node.value = val
-                break;
+                return
             }
-            node = node.next
         }
         this.first = new Node(key, val, this.first)
         this.n++
@@ -86,15 +89,17 @@ class SequentialSearchST {
 
 var st = new SequentialSearchST()
 
-st.put('a', 11)
-st.put('b', 22)
-st.put('c', 33)
-st.put('d', 44)
-
-console.log("size: " + st.size());
-console.log('b: ' + st.get('b'));
-st.delete('a')
-console.log('delete a 后: ' + st.size())
+st.put('D', 27)
+st.put('B', 15)
+st.put('T', 65)
+st.put('A', 5)
+st.put('A', 6)
+st.put('23', 19)
+st.put('15', 15)
+st.delete('D')
+console.log(st)
+console.log(st.size())
+console.log(st.keys())
 
 /**
  * object toString()  valueOf()
@@ -109,4 +114,4 @@ console.log('delete a 后: ' + st.size())
  * 否则在调用toString()返回
  * 
  */
-console.log('keys: '+st.keys());
+console.log('keys: ' + st.keys());

@@ -56,7 +56,7 @@ react实践项目总结
 
 - [x] [《算法第二章》学习笔记](./data_structure/algo2/algorithms2.md)   [各种排序算法排序过程的可视化展示](./rxjs/rxjs-practice.md)
 
-- [ ] [《算法第三章》学习笔记]()
+- [x] [《算法第三章》学习笔记](./data_structure/algo3/algorithms3.md)
 
 - [ ] [《算法第四章》学习笔记]()
 
