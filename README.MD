@@ -54,13 +54,11 @@ react实践项目总结
 
 - [x] [《算法第一章》学习笔记](./data_structure/algo1/algorithms1.md)
 
-- [x] [《算法第二章》学习笔记](./data_structure/algo2/algorithms2.md)   [各种排序算法排序过程的可视化展示](./rxjs/rxjs-practice.md)
+- [x] [《算法-排序》学习笔记](./data_structure/algo2/algorithms2.md)   [各种排序算法排序过程的可视化展示](./rxjs/rxjs-practice.md)
 
-- [x] [《算法第三章》学习笔记](./data_structure/algo3/algorithms3.md)
+- [x] [《算法-查找》学习笔记](./data_structure/algo3/algorithms3.md)
 
-- [ ] [《算法第四章》学习笔记]()
-
-- [ ] [《算法第五章》学习笔记]()
+- [ ] [《算法-图》学习笔记]()
 
 
  ## 网络
