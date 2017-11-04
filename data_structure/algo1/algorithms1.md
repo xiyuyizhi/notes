@@ -8,11 +8,9 @@
 
 2. [链表方式](#user-content-链表方式)
 
-3. [队列的链表实现](#user-content-队列的链表实现)
-
 - [常见的时间复杂度的级别](#user-content-常见的时间复杂度的级别)
 
-- [案例研究:union-find算法](#user-content-案例研究:union-find算法)
+- [案例研究:union-find算法](#user-content-案例研究union-find算法)
 
 目标：总结本书主要内容，相应算法使用js来模仿实现
 
