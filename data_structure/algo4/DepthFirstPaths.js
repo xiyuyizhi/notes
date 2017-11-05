@@ -1,8 +1,7 @@
 
-
 /**
  * 
- * 寻找两个顶点之间的最短路径
+ * 深度优先实现查找顶点s和顶点v之间的路径
  * 
  */
 
@@ -37,33 +36,27 @@ class Graph {
 
 }
 
-class BreadFirstPaths {
+class DepthFirstPaths {
 
     constructor(G, s) {
-        this.marked = new Array(G.v()).fill(0)
+        this._marked = new Array(G.v()).fill(0)
         this.edgeTo = new Array(G.v()).fill(0)
         this.s = s
-        this.bfs(G, s)
+        this.dfs(G, s)
     }
 
-    bfs(G, v) {
-        let queue = []
-        this.marked[v] = true
-        queue.push(v)
-        while (queue.length) {
-            let s = queue.shift()
-            for (let w of G.adj(s)) {
-                if (!this.marked[w]) {
-                    this.edgeTo[w] = s
-                    this.marked[w] = true
-                    queue.push(w)
-                }
+    dfs(g, v) {
+        this._marked[v] = true
+        for (let w of g.adj(v)) {
+            if (!this._marked[w]) {
+                this.edgeTo[w] = v
+                this.dfs(g, w)
             }
         }
     }
 
     hasPathTo(v) {
-        return this.marked[v]
+        return this._marked[v]
     }
 
     pathTo(v) {
@@ -75,7 +68,6 @@ class BreadFirstPaths {
         path.unshift(this.s)
         return path
     }
-
 
 }
 
@@ -97,10 +89,11 @@ function printAllPath(g, dfp, v) {
     }
 }
 
-let dfp = new BreadFirstPaths(g, 0)
+let dfp = new DepthFirstPaths(g, 0)
 printAllPath(g, dfp, 0)
 
 console.log('-----------');
 
-dfp = new BreadFirstPaths(g, 2)
+dfp = new DepthFirstPaths(g, 2)
 printAllPath(g, dfp, 2)
+

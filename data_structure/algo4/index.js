@@ -34,8 +34,8 @@ class Graph {
     }
 
     addEdge(v, w) {
-        this.adjs[v].push(w)
-        this.adjs[w].push(v)
+        this.adjs[v].unshift(w)
+        this.adjs[w].unshift(v)
         this.E++
     }
 
