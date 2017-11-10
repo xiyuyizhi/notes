@@ -66,7 +66,7 @@ react实践项目总结
 
 - [x] [《算法-图》学习笔记](./data_structure/algo4/algo4.md)
 
-- [] [使用canvas来表示最小生成树寻找过程](./data_structure/algo4/canvaGene.md)
+- [ ] [使用canvas来表示最小生成树寻找过程](./data_structure/algo4/canvaGene.md)
 
 
  ## 设计模式
