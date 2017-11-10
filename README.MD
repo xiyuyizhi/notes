@@ -13,11 +13,16 @@
  ### [前端加解密](https://github.com/xiyuyizhi/encrypt)
 
  ### [rxjs实践](https://xiyuyizhi.github.io/rxjs-sort-visualization/)
+
+ ### [canvas表示最小生成树寻找过程](https://xiyuyizhi.github.io/canvas_edge_weighted_graph/)
  
  ## js
  
  (转)[从 []==![] 为 true 来剖析 JavaScript 各种蛋疼的类型转换](https://github.com/jawil/blog/issues/1)
 
+ (转)[也谈JavaScript数组去重](https://www.toobug.net/article/array_unique_in_javascript.html)
+
+ - [x] [使用Sinopia快速搭建私有npm仓库](./js/privateRes.md)
  - [x] [object in javascript](./js/Object.md)
 
  ## rxjs
@@ -30,7 +35,6 @@
 
  - [x] [Rxjs入门实践-各种排序算法排序过程的可视化展示](https://github.com/xiyuyizhi/notes/issues/1)
 
- ## angularjs
 
  ## react redux
 
@@ -54,16 +58,26 @@ react实践项目总结
 
 - [x] [《算法第一章》学习笔记](./data_structure/algo1/algorithms1.md)
 
-- [x] [《算法-排序》学习笔记](./data_structure/algo2/algorithms2.md)   [各种排序算法排序过程的可视化展示](./rxjs/rxjs-practice.md)
+- [x] [《算法-排序》学习笔记](./data_structure/algo2/algorithms2.md)   
+
+- [x] [各种排序算法排序过程的可视化展示](https://github.com/xiyuyizhi/notes/issues/1)
 
 - [x] [《算法-查找》学习笔记](./data_structure/algo3/algorithms3.md)
 
 - [x] [《算法-图》学习笔记](./data_structure/algo4/algo4.md)
 
+- [] [使用canvas来表示最小生成树寻找过程](./data_structure/algo4/canvaGene.md)
+
+
+ ## 设计模式
+
+ - [ ] [常用设计模式和使用场景总结](./design_pattern/design-pattern.md)
+
+ - [ ] [结合设计模式来重新看待登录功能]()
 
  ## 网络
 
- ## 设计模式
+ [how-web-works](https://github.com/vasanthk/how-web-works)
 
 
 

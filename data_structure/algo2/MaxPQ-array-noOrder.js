@@ -46,7 +46,7 @@ var input = [5, 7, 20, 18, 3, 1, 22, 53, 0, 6]
 input.forEach(function (i) {
     maxPQ.insert(i)
     if (maxPQ.size() > 6) {
-        maxPQ.delMin()
+        console.log(maxPQ.delMin());
     }
 })
 while (!maxPQ.isEmpty()) {

@@ -21,3 +21,5 @@
 - [有向图顶点排序](./DepthFirstOrder.js)
 
 - [拓扑排序](./Topological.js)
+
+- [最小生成树](./primMST.js)
