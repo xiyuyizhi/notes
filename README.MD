@@ -14,7 +14,7 @@
 
  ### [rxjs实践](https://xiyuyizhi.github.io/rxjs-sort-visualization/)
 
- ### [canvas表示最小生成树寻找过程](https://xiyuyizhi.github.io/canvas_edge_weighted_graph/)
+ ### [canvas表示最小生成树寻路过程](https://xiyuyizhi.github.io/canvas_edge_weighted_graph/)
  
  ## js
  
@@ -31,7 +31,7 @@
 
  [(翻译)The introduction to Reactive Programming you've been missing](https://github.com/hehonghui/android-tech-frontier/tree/master/androidweekly/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E9%94%99%E8%BF%87%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B)
 
- [民工叔叔的RxJs理解](https://zhuanlan.zhihu.com/xufei)
+ [民工叔叔家的田](https://zhuanlan.zhihu.com/xufei)
 
  - [x] [Rxjs入门实践-各种排序算法排序过程的可视化展示](https://github.com/xiyuyizhi/notes/issues/1)
 
@@ -66,7 +66,7 @@ react实践项目总结
 
 - [x] [《算法-图》学习笔记](./data_structure/algo4/algo4.md)
 
-- [] [使用canvas来表示最小生成树寻找过程](./data_structure/algo4/canvaGene.md)
+- [x] [使用canvas表示最小生成树寻路过程](./data_structure/algo4/canvaGene.md)
 
 
  ## 设计模式
