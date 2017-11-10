@@ -68,7 +68,6 @@ react实践项目总结
 
 - [x] [使用canvas表示最小生成树寻路过程](./data_structure/algo4/canvaGene.md)
 
-
  ## 设计模式
 
  - [ ] [常用设计模式和使用场景总结](./design_pattern/design-pattern.md)
