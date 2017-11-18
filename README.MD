@@ -72,8 +72,6 @@ react实践项目总结
 
  - [x] [常用设计模式和使用场景总结](./design_pattern/design-pattern.md)
 
- - [ ] [结合设计模式来重新看待登录功能]()
-
  ## 网络
 
  [how-web-works](https://github.com/vasanthk/how-web-works)
