@@ -1,8 +1,8 @@
 # 记点东西
 
-:point_right: 感兴趣的话，watch一下吧
+:point_right: 感兴趣的话，star一下吧
 
- ## 练习
+ ## practice
 
  ### [angular实现的博客系统](https://github.com/xiyuyizhi/myBlog)
 
