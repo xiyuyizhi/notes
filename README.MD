@@ -18,11 +18,8 @@
  
  ## js
  
- (转)[从 []==![] 为 true 来剖析 JavaScript 各种蛋疼的类型转换](https://github.com/jawil/blog/issues/1)
-
- (转)[也谈JavaScript数组去重](https://www.toobug.net/article/array_unique_in_javascript.html)
-
  - [x] [使用Sinopia快速搭建私有npm仓库](./js/privateRes.md)
+
  - [x] [object in javascript](./js/Object.md)
 
  ## rxjs
@@ -38,7 +35,15 @@
 
  ## react redux
 
-react实践项目总结
+
+- [x] [react 主要内容总结](./react/react.md)
+
+- [ ] [redux 主要内容总结](./react/redux.md)
+
+- [ ] [react-router 主要内容总结](./react/react-router-dom.md)
+
+
+react实践总结
 
 - [x] [一步一步搭建react应用-前后端初始化](https://github.com/xiyuyizhi/movies/blob/master/dayByday/day1.md)
 
@@ -75,6 +80,20 @@ react实践项目总结
  ## 网络
 
  [how-web-works](https://github.com/vasanthk/how-web-works)
+
+ ### 好文收藏
+
+ [Angular沉思录（一）数据绑定](https://github.com/xufei/blog/issues/10)
+
+ [Angular 1.x和ES6的结合](https://github.com/xufei/blog/issues/29)
+
+ [从 []==![] 为 true 来剖析 JavaScript 各种蛋疼的类型转换](https://github.com/jawil/blog/issues/1)
+
+ [也谈JavaScript数组去重](https://www.toobug.net/article/array_unique_in_javascript.html)
+
+ [为什么0.1 + 0.2不等于0.3？](https://fed.renren.com/2017/05/13/float-number/)
+
+ [深度剖析：如何实现一个 Virtual DOM 算法](https://github.com/livoras/blog/issues/13)
 
 
 
