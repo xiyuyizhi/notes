@@ -22,6 +22,8 @@
 
  - [x] [object in javascript](./js/Object.md)
 
+ - [x] [webpack下换肤](./js/theme.md)
+
  ## rxjs
 
  [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
