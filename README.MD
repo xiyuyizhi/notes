@@ -40,9 +40,7 @@
 
 - [x] [react 主要内容总结](./react/react.md)
 
-- [ ] [redux 主要内容总结](./react/redux.md)
-
-- [ ] [react-router 主要内容总结](./react/react-router-dom.md)
+- [x] [redux 主要内容总结](./react/redux.md)
 
 
 react实践总结
