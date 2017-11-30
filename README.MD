@@ -24,6 +24,8 @@
 
  - [x] [webpack下换肤](./js/theme.md)
 
+ - [x] [Generators深度解读](https://github.com/xiyuyizhi/notes/issues/3)
+
  ## rxjs
 
  [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
@@ -71,7 +73,7 @@ react实践总结
 
 - [x] [《算法-图》学习笔记](./data_structure/algo4/algo4.md)
 
-- [x] [使用canvas表示最小生成树寻路过程](./data_structure/algo4/canvaGene.md)
+- [x] [使用canvas表示最小生成树寻路过程](https://github.com/xiyuyizhi/notes/issues/2)
 
  ## 设计模式
 
