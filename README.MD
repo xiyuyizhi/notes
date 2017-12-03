@@ -99,5 +99,6 @@ react实践总结
 
  [MobX](https://github.com/sorrycc/blog/issues/2)
 
+ [Javascript模块七日谈](http://huangxuan.me/2015/07/09/js-module-7day/)
 
 
