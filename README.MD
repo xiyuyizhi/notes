@@ -8,7 +8,7 @@
 
  ### [react-demo](https://xiyuyizhi.github.io/react-demo/)
 
- ### [react实践](https://github.com/xiyuyizhi/movies)
+ ### [react实践](http://xiyuyizhi.xyz/)
 
  ### [前端加解密](https://github.com/xiyuyizhi/encrypt)
 
