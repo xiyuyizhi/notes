@@ -20,11 +20,11 @@
  
  - [x] [使用Sinopia快速搭建私有npm仓库](./js/privateRes.md)
 
- - [x] [object in javascript](./js/Object.md)
-
  - [x] [webpack下换肤](./js/theme.md)
 
  - [x] [Generators深度解读](https://github.com/xiyuyizhi/notes/issues/3)
+ 
+ - [ ] [命令式、声明式、响应式小记]()
 
  ## rxjs
 
@@ -37,12 +37,14 @@
  - [x] [Rxjs入门实践-各种排序算法排序过程的可视化展示](https://github.com/xiyuyizhi/notes/issues/1)
 
 
- ## react redux
+ ## react技术栈
 
 
 - [x] [react 主要内容总结](./react/react.md)
 
 - [x] [redux 主要内容总结](./react/redux.md)
+
+- [ ] [mobx]() 
 
 
 react实践总结
