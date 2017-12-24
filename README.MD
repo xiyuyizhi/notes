@@ -16,6 +16,8 @@
 
  ### [canvas表示最小生成树寻路过程](https://xiyuyizhi.github.io/canvas_edge_weighted_graph/)
  
+ ### [mobx实践](https://jz6nnqkjw.codesandbox.io)
+ 
  ## js
  
  - [x] [使用Sinopia快速搭建私有npm仓库](./js/privateRes.md)
