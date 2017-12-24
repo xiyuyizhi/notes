@@ -16,7 +16,7 @@
 
  ### [canvas表示最小生成树寻路过程](https://xiyuyizhi.github.io/canvas_edge_weighted_graph/)
  
- ### [mobx实践](https://jz6nnqkjw.codesandbox.io)
+ ### [mobx实践](https://codesandbox.io/s/jz6nnqkjw)
  
  ## js
  
@@ -26,7 +26,6 @@
 
  - [x] [Generators深度解读](https://github.com/xiyuyizhi/notes/issues/3)
  
- - [ ] [命令式、声明式、响应式小记]()
 
  ## rxjs
 
@@ -42,11 +41,11 @@
  ## react技术栈
 
 
-- [x] [react 主要内容总结](./react/react.md)
+- [x] [react总结](./react/react.md)
 
-- [x] [redux 主要内容总结](./react/redux.md)
+- [x] [redux总结](./react/redux.md)
 
-- [ ] [mobx]() 
+- [x] [mobx浅析](./react/mobx.md) 
 
 
 react实践总结

@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>css demo</title>
+        <style>
+             *{
+                 margin: 0
+             }
+                h1{
+                    margin-top: 40px;
+                }
+                .item1{
+                    width: 100px;
+                    height: 100px;
+                    float: left;
+                    border: 1px solid red;
+                    margin-right: 10px;
+                }
+                .item2{
+                    max-width: 400px;
+                    overflow: hidden;
+                    word-wrap: break-word;
+                }
+
+                .calByparentWidth{
+                    max-width: 600px;
+
+                }
+                .calByparentWidth .dengbi{
+                    width: calc(25% - 20px);
+                    padding-top: calc(25% - 20px);
+                    display: inline-block;
+                    margin: 0 10px;
+
+                }
+        </style>
+    </head>
+    <body>
+        <h1>BFC实现两列流式布局</h1>
+        <div class="bfc">
+            <div class="item1">float</div>
+            <div class="item2">
+                <ul>
+                    <li>根元素</li>
+                    <li>float的值不为none</li>
+                    <li>overflow的值不为visible</li>
+                    <li>display的值为inline-block、table-cell、table-caption</li>
+                    <li>position的值为absolute或fixed</li>
+                </ul>
+            </div>
+        </div>
+        <h1>上下外边距的百分比是根据父元素的宽度计算的</h1>
+
+        <div class="calByparentWidth">
+            <div class="dengbi" style="background:red"></div><div class="dengbi" style="background:blue"></div><div class="dengbi" style="background:pink"></div><div class="dengbi" style="background:green"></div>
+        </div>
+
+    </body>
+</html>
