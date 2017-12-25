@@ -45,7 +45,7 @@
 
 - [x] [redux总结](./react/redux.md)
 
-- [x] [mobx浅析](./react/mobx.md) 
+- [x] [mobx浅析](https://github.com/xiyuyizhi/notes/issues/4) 
 
 
 react实践总结

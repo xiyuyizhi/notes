@@ -23,7 +23,7 @@ DOM events -> RxJS -> Update state -> MobX -> Update UI
 ```
 
 
-## 专注数据侧面响应式的mobx
+## 专注数据层面响应式的mobx
 
 mobx的核心思想是让一切需要应用状态的东西，在需要的时候，都能自动获取需要的数据，比如说
 
@@ -56,7 +56,6 @@ class Todo extends React.Component{
 }
  //当list变化时,Todo组件重新render
 ```
-
 
 - ### mobx的四个核心概念
 
@@ -91,9 +90,9 @@ class TodoList extends React.Component{
 
 *derivations*就是用来计算那个可以通过state间接计算来的值
 
-**Reactions**:代表剩下的那些需要需要对state变化动态作出反应的东西，比如说react的重新render，数据变化时自动重新ajax请求
+**Reactions**:代表剩下的那些需要对state变化动态作出反应的东西，比如说react的重新render，数据变化时自动重新ajax请求
 
-举个例子: 一个搜索功能，我们有一个store类，代表应用的状态，有一个observable字段search，代表页面中input标签的用户输入值，当用户输入东西的时候，自动发送查询请求，这里，对search的变化自动发送ajax请求就是一个 reactions
+举个例子: 一个搜索功能，我们有一个store类，代表应用的状态，有一个observable字段search，代表页面中input标签的用户输入值，当用户输入东西的时候，自动发送查询请求，这里，对search的变化自动发送ajax请求就是一个 reactions
 
 ```
 class SearchGit{
@@ -108,13 +107,13 @@ class SearchGit{
 }
 ```
 
-**actions**: 改变state的操作
+**actions**: 改变state的操作，显式申明更好
 
 ## 简单实践
 
 ### [react结合mobx的一个github repos 搜索的功能，支持滚动加载](https://codesandbox.io/s/jz6nnqkjw)
 
-PS(从mobx仓库的首页中发现一个在线写代码的网站codesanbox，和jsfiddle等比起来颜值简直不能再高。。。。这个小练习就是直接在上面编辑的，不足之处就是不支持样式文件的方式，样式只能写成style)
+PS(从mobx仓库的首页中发现一个在线写代码的网站codesanbox，和jsfiddle等比起来颜值简直不能再高。。。。这个小练习就是直接在上面编辑的，不足之处就是不支持样式文件的方式，样式只能写成style)
 
 初步实践总结：
 
