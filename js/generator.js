@@ -91,3 +91,44 @@ const g4 = ret()
 // g4.next()
 // g4.next('input')
 // console.log(g4.return('ok?'));
+
+
+
+function asyncSleep(geneFn) {
+
+    const gene = geneFn()
+
+    handleGene(gene.next())
+
+    function handleGene({ done, value }) {
+        if (!done) {
+            if (value.toString() == '[object Promise]') {
+                value.then(res => {
+                    handleGene(gene.next(res))
+                }, error => {
+                    handleGene(gene.next(error))
+                })
+            }
+        }
+    }
+}
+
+//use case
+function sleep(delay) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('ok')
+        }, delay)
+    })
+}
+asyncSleep(function* geneSleep() {
+    console.log(new Date().getTime())
+    const inp = yield sleep(3000)
+    console.log('input ' + inp);
+    console.log(new Date().getTime())
+    const inp1 = yield sleep(3000)
+    console.log('input ' + inp);
+    console.log(new Date().getTime())
+})
+
+

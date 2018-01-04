@@ -26,6 +26,8 @@
 
  - [x] [Generators深度解读](https://github.com/xiyuyizhi/notes/issues/3)
  
+ - [x] [正则 理解这些点就够了](https://github.com/xiyuyizhi/notes/issues/5)
+
 
  ## rxjs
 
