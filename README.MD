@@ -16,7 +16,7 @@
 
  ### [canvas表示最小生成树寻路过程](https://xiyuyizhi.github.io/canvas_edge_weighted_graph/)
  
- ### [mobx实践](https://codesandbox.io/s/jz6nnqkjw)
+ ### [mobx实践](https://xiyuyizhi.github.io/react-mobx-gitrepos-search/)
  
  ## js
  
