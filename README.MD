@@ -1,7 +1,5 @@
 # 记点东西
 
-:point_right: 感兴趣的话，star一下吧
-
  ## practice
 
  ### [angular实现的博客系统](https://github.com/xiyuyizhi/myBlog)
@@ -19,14 +17,16 @@
  ### [mobx实践](https://xiyuyizhi.github.io/react-mobx-gitrepos-search/)
  
  ## js
- 
+
  - [x] [使用Sinopia快速搭建私有npm仓库](./js/privateRes.md)
 
  - [x] [webpack下换肤](./js/theme.md)
 
  - [x] [Generators深度解读](https://github.com/xiyuyizhi/notes/issues/3)
- 
+
  - [x] [正则 理解这些点就够了](https://github.com/xiyuyizhi/notes/issues/5)
+
+ - [x] [browser render,js执行机制](https://github.com/xiyuyizhi/notes/issues/8)
 
 
  ## rxjs
@@ -41,7 +41,6 @@
 
 
  ## react技术栈
-
 
 - [x] [react总结](./react/react.md)
 
