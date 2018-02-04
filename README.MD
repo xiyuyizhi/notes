@@ -28,6 +28,7 @@
 
  - [x] [browser render,js执行机制](https://github.com/xiyuyizhi/notes/issues/8)
 
+ - [x] [从history api看主流框架的路由机制](https://github.com/xiyuyizhi/notes/issues/9)
 
  ## rxjs
 
