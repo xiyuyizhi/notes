@@ -28,8 +28,6 @@
 
  - [x] [browser render,js执行机制](https://github.com/xiyuyizhi/notes/issues/8)
 
- - [x] [从history api看主流框架的路由机制](https://github.com/xiyuyizhi/notes/issues/9)
-
  ## rxjs
 
  [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
@@ -49,6 +47,7 @@
 
 - [x] [mobx浅析](https://github.com/xiyuyizhi/notes/issues/4) 
 
+- [x] [从history api看主流框架的路由机制](https://github.com/xiyuyizhi/notes/issues/9)
 
 react实践总结
 
