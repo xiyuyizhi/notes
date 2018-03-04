@@ -28,6 +28,8 @@
 
  - [x] [browser render,js执行机制](https://github.com/xiyuyizhi/notes/issues/8)
 
+ - [x] [babel小记](https://github.com/xiyuyizhi/notes/issues/10)
+
  ## rxjs
 
  [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
