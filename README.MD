@@ -51,7 +51,7 @@
 
 - [x] [从history api看主流框架的路由机制](https://github.com/xiyuyizhi/notes/issues/9)
 
-- [x] [preact源码阅读笔记](https://github.com/xiyuyizhi/notes/issues/11)
+- [x] [preact源码分析](https://github.com/xiyuyizhi/notes/issues/11)
 
 - [ ] [结合动态规划算法封装react瀑布流组件]()
 
