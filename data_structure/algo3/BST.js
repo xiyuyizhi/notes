@@ -72,19 +72,39 @@ class BST {
 
     keys() {
         const keys = []
-        this._iterator(this.root, keys)
+        this._iterator(this.root, keys,'LNR')
         return keys
     }
 
     //中序遍历
-    _iterator(node, arr) {
-        if (!node) return
-        if (node) {
-            arr.push(node.key)
-        }
-        this._iterator(node.left, arr)
-        this._iterator(node.right, arr)
+    keys_LNR() {
+        return this.keys()
     }
+
+    //前序遍历
+    keys_NLR() {
+        const keys = []
+        this._iterator(this.root, keys,'NLR')
+        return keys
+    }
+
+    //后序遍历
+    keys_LRN() {
+        const keys = []
+        this._iterator(this.root, keys,'LRN')
+        return keys
+    }
+
+    //遍历
+    _iterator(node, arr, type) {
+        if (!node) return
+        if (type == 'NLR') arr.push(node.key)
+        this._iterator(node.left, arr, type)
+        if(type=='LNR') arr.push(node.key)
+        this._iterator(node.right, arr, type)
+        if(type=='LRN') arr.push(node.key)
+    }
+
 
     //返回树中小于key的元素的数量
     rank(key) {
@@ -145,20 +165,28 @@ const st = new BST()
 
 st.put('G', 27)
 st.put('B', 15)
-st.put('C', 16)
+st.put('E', 16)
 st.put('T', 65)
 st.put('A', 5)
 st.put('D', 6)
-st.put('23', 19)
-st.put('15', 15)
-st.delete('23')
-st.put('24',24)
-console.log(st.size())
-console.log(st.keys())
-console.log(st.rank('T'))
-console.log('delete----------');
-st.delete('B')
-console.log(st.size())
-console.log(st.keys())
-console.log(st.rank('T'))
+st.put('S', 19)
+st.put('C', 15)
+console.log(st.root);
+console.log('中序 '+st.keys())
+console.log('前序 '+st.keys_NLR())
+console.log('后序 '+st.keys_LRN())
+
+/**
+ * 
+ * 
+ *                  G
+ *          B               T
+ *      A         E        S 
+ *              D
+ *             C 
+ * 
+ * 
+ * 
+ */
+
 // console.log(st)
