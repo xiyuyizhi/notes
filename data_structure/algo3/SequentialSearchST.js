@@ -101,17 +101,4 @@ console.log(st)
 console.log(st.size())
 console.log(st.keys())
 
-/**
- * object toString()  valueOf()
- * 
- * toString() 字符串表示 [].toString() 是 “”
- * valueOf()  返回对象的原始值
- * 
- * toPrimitive(obj,type)  对基本类型不转换,对对象的话，如果是date，type是string，其他为number
- * 
- * 内部:obj为基本类型,type为number，直接返回，
- * 否则调用valueOf()，结果为基本类型，返回，
- * 否则在调用toString()返回
- * 
- */
 console.log('keys: ' + st.keys());
