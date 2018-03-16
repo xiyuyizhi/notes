@@ -4,6 +4,8 @@
 
 - [选择排序](#user-content-选择排序)
 
+- [冒泡排序](#user-content-冒泡排序)
+
 - [插入排序](#user-content-插入排序)
 
 - [归并排序](#user-content-归并排序)
@@ -61,7 +63,7 @@ function selectsort(arr) {
  对于长度为N的数组
 /**
  * i  内循环 比较次数
- * 0   N-1
+ * 0   N-1  
  * 1   N-2
  * .
  * .
@@ -81,6 +83,56 @@ function selectsort(arr) {
 - [x] 运行时间与输入无关
 
 - [x] 数据移动是最少的
+
+
+### 冒泡排序
+
+思想:依次比较相邻的两个元素，如果前一个大于后一个，交换两者，直到把最大元素放到最后，继续从头开始。
+
+```
+function BubbleSort(arr) {
+
+    let len = arr.length
+    let temp
+
+    for (let i = 0; i < len - 1; i++) {
+
+        for (let j = 0; j < len - 1 - i; j++) {
+
+            if (arr[j] > arr[j + 1]) {
+                temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+            }
+
+        }
+
+    }
+    return arr
+
+}
+```
+
+- 复杂度分析
+
+在最好的情况下，数组本来就是正序的，需要比较n-1次，不交换数据
+
+在最坏的情况下,数组本来是逆序的，对于长度为N的数组
+
+```
+i   内循环比较次数
+
+0   N-1
+1   N-3
+.
+.
+N-3 2 
+N-2 1
+
+```
+总的比较次数为`(N-1)(1+N-1)/1 = (N-1)(N)/2` ~ N^2/2
+
+所以平均情况下的时间复杂度为`平方级`
 
 ### 插入排序
 
@@ -128,7 +180,7 @@ function insertsort(arr) {
 
 ```
 
-复杂度分析:
+- 复杂度分析:
 
 插入排序的效率和输入有关
 
@@ -229,7 +281,7 @@ MergeSort.prototype.sort = function (arr, start, end) {
 
 ```
 
-复杂度分析:
+- 复杂度分析:
 
 ![](./up-down-mergesort.png)
 
@@ -758,6 +810,8 @@ console.log(sort.sort())
 本章的学习收获
 
 - [x] 选择排序
+
+- [x] 冒泡排序
 
 - [x] 插入排序
 

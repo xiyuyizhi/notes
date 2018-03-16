@@ -71,29 +71,29 @@ react实践总结
 
 
 
- ## 算法、数据结构
+ ## algorithm
 
 - [x] [《算法第一章》学习笔记](./data_structure/algo1/algorithms1.md)
 
-- [x] [《算法-排序》学习笔记](./data_structure/algo2/algorithms2.md)   
+- [x] [排序算法](./data_structure/algo2/algorithms2.md)   
 
 - [x] [各种排序算法排序过程的可视化展示](https://github.com/xiyuyizhi/notes/issues/1)
 
-- [x] [《算法-查找》学习笔记](./data_structure/algo3/algorithms3.md)
+- [x] [查找与树](./data_structure/algo3/algorithms3.md)
 
-- [x] [《算法-图》学习笔记](./data_structure/algo4/algo4.md)
+- [x] [图](./data_structure/algo4/algo4.md)
 
 - [x] [使用canvas表示最小生成树寻路过程](https://github.com/xiyuyizhi/notes/issues/2)
 
- ## 设计模式
+ ## design pattern
 
  - [x] [常用设计模式和使用场景总结](./design_pattern/design-pattern.md)
 
- ## 网络
+ ## network
 
  [how-web-works](https://github.com/vasanthk/how-web-works)
 
- ### 好文收藏
+ ### collect
 
  [Angular沉思录（一）数据绑定](https://github.com/xufei/blog/issues/10)
 
