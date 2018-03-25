@@ -53,8 +53,6 @@
 
 - [x] [preact源码分析](https://github.com/xiyuyizhi/notes/issues/11)
 
-- [ ] [结合动态规划算法封装react瀑布流组件]()
-
 react实践总结
 
 - [x] [一步一步搭建react应用-前后端初始化](https://github.com/xiyuyizhi/movies/blob/master/dayByday/day1.md)
