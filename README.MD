@@ -29,6 +29,9 @@
  - [x] [browser render,js执行机制](https://github.com/xiyuyizhi/notes/issues/8)
 
  - [x] [babel小记](https://github.com/xiyuyizhi/notes/issues/10)
+ 
+ - [x] [代码风格](./js/style_guide.md)
+
 
  ## rxjs
 
