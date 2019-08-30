@@ -1,20 +1,5 @@
-# 记点东西
+# notes
 
- ## practice
-
- ### [angular实现的博客系统](https://github.com/xiyuyizhi/myBlog)
-
- ### [react-demo](https://xiyuyizhi.github.io/react-demo/)
-
- ### [react实践](http://xiyuyizhi.xyz:8080)
-
- ### [前端加解密](https://github.com/xiyuyizhi/encrypt)
-
- ### [rxjs实践](https://xiyuyizhi.github.io/rxjs-sort-visualization/)
-
- ### [canvas表示最小生成树寻路过程](https://xiyuyizhi.github.io/canvas_edge_weighted_graph/)
- 
- ### [mobx实践](https://xiyuyizhi.github.io/react-mobx-gitrepos-search/)
  
  ## js
 
